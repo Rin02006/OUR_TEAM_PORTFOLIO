@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -35,6 +35,7 @@
       align-items: center;
       gap: 30px;
       transition: background-color 0.3s ease;
+      flex-wrap: wrap;
     }
     .profile-img {
       width: 240px;
@@ -129,6 +130,19 @@
       transition: color 0.3s ease;
     }
 
+    /* Side by side Hobbies and Contact Info */
+    .hobbies-contact {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-top: 20px;
+    }
+    .hobbies-contact > div {
+      flex: 1;
+      min-width: 200px;
+    }
+
     @media (max-width: 768px) {
       section {
         flex-direction: column;
@@ -141,6 +155,14 @@
       .profile-img {
         width: 150px;
         height: 150px;
+      }
+      .hobbies-contact {
+        flex-direction: row; /* keep side by side on mobile */
+        justify-content: center;
+        gap: 20px;
+      }
+      .hobbies-contact > div {
+        flex: 1;
       }
     }
   </style>
@@ -161,25 +183,23 @@
       <h2>About Me</h2>
       <p>Hi! I’m Aldrin, I love going to the beach because it makes me feel happy and relaxed. I enjoy playing music and singing. Music is fun for me, and it makes me feel good. These are some of the things I really like to do in my free time.</p>
 
-     <div style="display: flex; gap: 40px; flex-wrap: nowrap; justify-content: center; width: 100%">
-  
-    <div>
-      <h3>My Hobbies</h3>
-      <ul>
-        <li>Playing Organ</li>
-        <li>Coding</li>
-        <li>Playing Mobile Legends</li>
-        <li>Listening to music</li>
-        <li>Singing</li>
-      </ul>
-    </div>
+      <div class="hobbies-contact">
+        <div>
+          <h3>My Hobbies</h3>
+          <ul>
+            <li>Playing Organ</li>
+            <li>Coding</li>
+            <li>Playing Mobile Legends</li>
+            <li>Listening to music</li>
+            <li>Singing</li>
+          </ul>
+        </div>
 
-  <div>
-    <h3>Contact Information</h3>
-    <p>Email: <a href="mailto:aldrincaralipio5@gmail.com">aldrincaralipio5@gmail.com</a></p>
-    <p>Phone: 09810320177</p>
-  </div>
-
+        <div>
+          <h3>Contact Information</h3>
+          <p>Email: <a href="mailto:aldrincaralipio5@gmail.com">aldrincaralipio5@gmail.com</a></p>
+          <p>Phone: 09810320177</p>
+        </div>
       </div>
 
       <h3>Favorite Sites</h3>
