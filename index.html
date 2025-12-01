@@ -77,7 +77,7 @@
     }
 
     .btn-portfolio {
-      background-color: #a9744f; /* keep original brown */
+      background-color: #a9744f; 
       border: none;
       color: white;
       padding: 8px 15px;
@@ -171,11 +171,13 @@
         margin-bottom: 15px;
         margin-right: 0;
       }
+      /* Make navbar always inline on mobile */
       .navbar-nav {
         flex-direction: row !important;
       }
       .navbar-collapse {
-        justify-content: flex-end;
+        display: flex !important;
+        justify-content: flex-end !important;
       }
     }
   </style>
@@ -185,7 +187,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="index.html">Group 3</a>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse show" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item">
             <a class="nav-link active" href="index.html">Home</a>
@@ -227,7 +229,7 @@
       <div class="col-auto">
         <div class="card member-card">
           <div class="member-role">Member</div>
-          <img src="FORMAL_CARALIPIO.jpg" class="member-img" alt="Rowena" />
+          <img src="FORMAL_CARALIPIO.jpg" class="member-img" alt="Aldrin" />
           <h5 class="card-title">Aldrin Caralipio</h5>
           <a href="Aldrin-portfolio.html" class="btn-portfolio">View Portfolio</a>
         </div>
@@ -246,7 +248,7 @@
         <div class="card member-card">
           <div class="member-role">Member</div>
           <img src="FORMAL_EVANGELISTA.jpg" class="member-img" alt="Ronabelle" />
-          <h5 class="card-title">RonabelleEvangelista</h5>
+          <h5 class="card-title">Ronabelle Evangelista</h5>
           <a href="ronabelle-portfolio.html" class="btn-portfolio">View Portfolio</a>
         </div>
       </div>
