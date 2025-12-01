@@ -155,6 +155,20 @@
       transition: color 0.3s;
     }
 
+    /* Navbar fixed layout */
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
+    }
+
     @media (max-width: 768px) {
       .member-card {
         width: 200px;
@@ -171,38 +185,27 @@
         margin-bottom: 15px;
         margin-right: 0;
       }
-      /* Make navbar always inline on mobile */
       .navbar-nav {
-        flex-direction: row !important;
-      }
-      .navbar-collapse {
-        display: flex !important;
-        justify-content: flex-end !important;
+        flex-wrap: wrap;
+        justify-content: flex-end;
       }
     }
   </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-dark bg-dark">
     <div class="container">
+      <!-- Left side -->
       <a class="navbar-brand" href="index.html">Group 3</a>
-      <div class="collapse navbar-collapse show" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-center">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#members">Our Members</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Me</a>
-          </li>
-          <li class="nav-item ms-3">
-            <i id="darkModeToggle" class="bi bi-sun-fill"></i>
-          </li>
-        </ul>
-      </div>
+
+      <!-- Right side -->
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#members">Our Members</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+        <li class="nav-item ms-3"><i id="darkModeToggle" class="bi bi-sun-fill"></i></li>
+      </ul>
     </div>
   </nav>
 
@@ -248,7 +251,7 @@
         <div class="card member-card">
           <div class="member-role">Member</div>
           <img src="FORMAL_EVANGELISTA.jpg" class="member-img" alt="Ronabelle" />
-          <h5 class="card-title">RonabelleEvangelista</h5>
+          <h5 class="card-title">Ronabelle Evangelista</h5>
           <a href="ronabelle-portfolio.html" class="btn-portfolio">View Portfolio</a>
         </div>
       </div>
@@ -305,5 +308,3 @@
 
 </body>
 </html>
-
-
