@@ -155,11 +155,12 @@
       transition: color 0.3s;
     }
 
-    /* Navbar fixed layout */
-    .navbar .container {
+    /* Fixed inline navbar */
+    .navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 0.5rem 1rem;
     }
 
     .navbar-nav {
@@ -167,6 +168,13 @@
       flex-direction: row;
       align-items: center;
       gap: 15px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: #fff !important;
     }
 
     @media (max-width: 768px) {
@@ -194,19 +202,17 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-dark bg-dark">
-    <div class="container">
-      <!-- Left side -->
-      <a class="navbar-brand" href="index.html">Group 3</a>
+  <nav class="navbar bg-dark">
+    <!-- Left: Group 3 -->
+    <a class="navbar-brand" href="index.html">Group 3</a>
 
-      <!-- Right side -->
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#members">Our Members</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
-        <li class="nav-item ms-3"><i id="darkModeToggle" class="bi bi-sun-fill"></i></li>
-      </ul>
-    </div>
+    <!-- Right: Links + dark mode -->
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#members">Our Members</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+      <li class="nav-item"><i id="darkModeToggle" class="bi bi-sun-fill"></i></li>
+    </ul>
   </nav>
 
   <header class="bg-primary text-white py-3">
