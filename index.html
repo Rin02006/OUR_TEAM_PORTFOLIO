@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Group 3 - Our Team Portfolio</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Bootstrap Icons for toggle -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    body {
+      background-color: #f5e6cc;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #4b3b2b;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header.bg-primary {
+      background-color: #a9744f !important;
+      transition: background-color 0.3s;
+    }
+
+    section {
+      background-color: #fff5e1;
+      border-radius: 10px;
+      padding: 30px;
+      margin-top: 30px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .member-card {
+      background-color: #ffffff;
+      border: 2px solid #e4d1b3;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      transition: 0.3s;
+      width: 230px;
+      height: 280px;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      margin: 14px;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    .member-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff5e1;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      margin-bottom: 10px;
+      transition: border-color 0.3s;
+    }
+
+    .card-title {
+      margin-bottom: 10px;
+      transition: color 0.3s;
+    }
+
+    .member-role {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #a9744f;
+      margin-bottom: 5px;
+      transition: color 0.3s;
+    }
+
+    .btn-portfolio {
+      background-color: #a9744f; /* keep original brown */
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-portfolio:hover {
+      background-color: #6b4a2b;
+    }
+
+    footer {
+      background-color: #4b3b2b;
+      color: #fff;
+      padding: 10px 0;
+      margin-top: 40px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .member-row {
+      justify-content: center;
+      gap: 28px 28px;
+    }
+
+    .group-photo {
+      max-width: 150px;
+      max-height: 150px;
+      border-radius: 15px;
+      margin-right: 20px;
+      transition: filter 0.3s;
+    }
+
+    body.dark-mode {
+      background-color: #000000;
+      color: #f5f5f5;
+    }
+
+    body.dark-mode header.bg-primary {
+      background-color: #3b2f23 !important;
+    }
+
+    body.dark-mode section {
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+    }
+
+    body.dark-mode .member-card {
+      background-color: #2a2a2a;
+      border-color: #444;
+    }
+
+    body.dark-mode .member-role {
+      color: #d4a373;
+    }
+
+    body.dark-mode .card-title {
+      color: #a9744f; 
+    }
+
+    body.dark-mode .member-img {
+      border-color: #2a2a2a;
+    }
+
+    body.dark-mode footer {
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+    }
+
+    #darkModeToggle {
+      color: #ffff00; 
+    }
+
+    @media (max-width: 768px) {
+      .member-card {
+        width: 200px;
+        height: 290px;
+        margin: 10px;
+      }
+      .member-img {
+        width: 100px;
+        height: 100px;
+      }
+      .group-photo {
+        max-width: 120px;
+        max-height: 120px;
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Group 3</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#members">Our Members</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Me</a>
+          </li>
+
+          <li class="nav-item ms-3">
+            <i id="darkModeToggle" class="bi bi-sun-fill" style="font-size:1.5rem; cursor:pointer;"></i>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3 text-center text-md-start">
+          <img src="group.jpg" alt="Group Photo" class="group-photo">
+        </div>
+        <div class="col-md-9 text-center text-md-start">
+          <h1>Welcome to Our Group Portfolio</h1>
+          <p class="lead">
+            Hello! We are Group United and This is our Group Portfolio. It shows who we are and the things we made together. In this project, we share our work, our skills, and our ideas. This portfolio helps people understand our group better and see what we can do.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="container text-center" id="members">
+    <h2 class="mb-5">Meet Our Members</h2>
+    <div class="row member-row justify-content-center">
+    
+      <div class="col-auto">
+        <div class="card member-card">
+          <div class="member-role">Member</div>
+          <img src="FORMAL_CARALIPIO.jpg" class="member-img" alt="Rowena" />
+          <h5 class="card-title">Aldrin Caralipio</h5>
+          <a href="Aldrin-portfolio.html" class="btn-portfolio">View Portfolio</a>
+        </div>
+      </div>
+
+      <div class="col-auto">
+        <div class="card member-card">
+          <div class="member-role">Leader</div>
+          <img src="FORMAL_MOLINA.jpg" class="member-img" alt="Rowena" />
+          <h5 class="card-title">Rowena Molina</h5>
+          <a href="rowena-portfolio.html" class="btn-portfolio">View Portfolio</a>
+        </div>
+      </div>
+
+      <div class="col-auto">
+        <div class="card member-card">
+          <div class="member-role">Member</div>
+          <img src="FORMAL_EVANGELISTA.jpg" class="member-img" alt="Ronabelle" />
+          <h5 class="card-title">RonabelleEvangelista</h5>
+          <a href="ronabelle-portfolio.html" class="btn-portfolio">View Portfolio</a>
+        </div>
+      </div>
+
+      <div class="col-auto">
+        <div class="card member-card">
+          <div class="member-role">Member</div>
+          <img src="Delahente.jpg" class="member-img" alt="Steffe" />
+          <h5 class="card-title">Steffe Delahente</h5>
+          <a href="steffe-portfolio.html" class="btn-portfolio">View Portfolio</a>
+        </div>
+      </div>
+
+      <div class="col-auto">
+        <div class="card member-card">
+          <div class="member-role">Member</div>
+          <img src="FORMAL_SOLIS.jpg" class="member-img" alt="Alvin" />
+          <h5 class="card-title">Alvin Solis</h5>
+          <a href="alvin-portfolio.html" class="btn-portfolio">View Portfolio</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">
+        &copy; 2025 Group 3 — Aldrin, Rowena, Ronabelle, Steffe, and Alvin.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('darkModeToggle');
+
+    if(localStorage.getItem('darkMode') === 'enabled'){
+      document.body.classList.add('dark-mode');
+      toggle.classList.remove('bi-sun-fill');
+      toggle.classList.add('bi-moon-fill');
+    }
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+
+      if(document.body.classList.contains('dark-mode')) {
+        toggle.classList.remove('bi-sun-fill');
+        toggle.classList.add('bi-moon-fill');
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        toggle.classList.remove('bi-moon-fill');
+        toggle.classList.add('bi-sun-fill');
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+  </script>
+
+</body>
+</html>
