@@ -58,11 +58,11 @@
 
     .btn-portfolio {
       background-color: #a9744f;
-      border: none;
       color: white;
       padding: 8px 15px;
       border-radius: 8px;
       text-decoration: none;
+      border: none;
       transition: 0.3s;
     }
 
@@ -82,8 +82,8 @@
 
     /* Dark Mode */
     body.dark-mode {
-      background-color: #000;
-      color: #fff;
+      background-color: #000000;
+      color: #f5f5f5;
     }
 
     body.dark-mode header.bg-primary {
@@ -101,46 +101,52 @@
     #darkModeToggle {
       font-size: 1.5rem;
       cursor: pointer;
-      margin-left: 10px;
+      color: #ffff00;
     }
 
-    /* Navbar ALWAYS visible */
+    /* Remove hamburger/collapse — always visible nav */
     .navbar-nav {
       display: flex;
       align-items: center;
       gap: 15px;
     }
 
+    /* Mobile nav stays aligned */
     @media (max-width: 768px) {
       .navbar-nav {
         flex-direction: row;
-        gap: 10px;
+        gap: 8px;
         font-size: 14px;
-      }
-      .group-photo {
-        max-width: 120px;
-        margin-bottom: 10px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR (NO HAMBURGER MENU) -->
+  <!-- FIXED NAV — NO HAMBURGER -->
   <nav class="navbar navbar-dark bg-dark">
     <div class="container d-flex justify-content-between align-items-center">
 
       <a class="navbar-brand" href="index.html">Group 3</a>
 
-      <ul class="navbar-nav flex-row">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#members">Our Members</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Me</a></li>
+      <ul class="navbar-nav flex-row ms-auto">
 
-        <!-- DARK MODE ALWAYS VISIBLE -->
         <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#members">Our Members</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Me</a>
+        </li>
+
+        <li class="nav-item ms-2">
           <i id="darkModeToggle" class="bi bi-sun-fill"></i>
         </li>
+
       </ul>
 
     </div>
@@ -157,7 +163,7 @@
         <div class="col-md-9 text-center text-md-start">
           <h1>Welcome to Our Group Portfolio</h1>
           <p class="lead">
-            Hello! We are Group United. This is our Group Portfolio. It shows who we are and what we made together.
+            Hello! We are Group United and This is our Group Portfolio. It shows who we are and the things we made together. In this project, we share our work, our skills, and our ideas. This portfolio helps people understand our group better and see what we can do.
           </p>
         </div>
 
@@ -175,7 +181,7 @@
           <div class="member-role">Member</div>
           <img src="FORMAL_CARALIPIO.jpg" class="member-img">
           <h5 class="card-title">Aldrin Caralipio</h5>
-          <a href="Aldrin-portfolio.html" class="btn-portfolio">View Portfolio</a>
+          <a href="aldrin-portfolio.html" class="btn-portfolio">View Portfolio</a>
         </div>
       </div>
 
@@ -219,26 +225,26 @@
   </section>
 
   <footer class="text-center">
-    <p>&copy; 2025 Group 3 — Aldrin, Rowena, Ronabelle, Steffe, and Alvin.</p>
+    <p class="mb-0">&copy; 2025 Group 3 — Aldrin, Rowena, Ronabelle, Steffe, and Alvin.</p>
   </footer>
 
   <script>
-    const toggle = document.getElementById("darkModeToggle");
+    const toggle = document.getElementById('darkModeToggle');
 
-    if(localStorage.getItem("darkMode") === "enabled") {
-      document.body.classList.add("dark-mode");
-      toggle.classList.replace("bi-sun-fill","bi-moon-fill");
+    if(localStorage.getItem('darkMode') === 'enabled'){
+      document.body.classList.add('dark-mode');
+      toggle.classList.replace('bi-sun-fill','bi-moon-fill');
     }
 
-    toggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
 
-      if(document.body.classList.contains("dark-mode")) {
-        toggle.classList.replace("bi-sun-fill","bi-moon-fill");
-        localStorage.setItem("darkMode","enabled");
+      if(document.body.classList.contains('dark-mode')) {
+        toggle.classList.replace('bi-sun-fill','bi-moon-fill');
+        localStorage.setItem('darkMode','enabled');
       } else {
-        toggle.classList.replace("bi-moon-fill","bi-sun-fill");
-        localStorage.setItem("darkMode","disabled");
+        toggle.classList.replace('bi-moon-fill','bi-sun-fill');
+        localStorage.setItem('darkMode','disabled');
       }
     });
   </script>
